@@ -121,6 +121,9 @@ namespace tap\type;
         }
         
         
+        public function get($default=null) {
+            
+        }
 
 
         /**

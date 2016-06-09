@@ -13,4 +13,3 @@
     
     
     
-\tap\tapval("wurst")->assertIsString()->assertUri()->isFileName();
