@@ -5,6 +5,7 @@
  * Date: 09.06.16
  * Time: 03:09
  */
+namespace tap\type;
 
     class TapDate {
         

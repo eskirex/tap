@@ -6,6 +6,7 @@
  * Time: 02:44
  */
 
+namespace tap\type;
 
     class TapHostName {
 

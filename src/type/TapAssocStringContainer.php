@@ -6,6 +6,8 @@
  * Time: 03:12
  */
 
+    namespace tap\type;
+
 
     class TapAssocStringContainer {
         

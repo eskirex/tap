@@ -6,6 +6,9 @@
  * Time: 02:58
  */
 
+namespace tap\type;
+
+
     class TapStringArray {
 
 

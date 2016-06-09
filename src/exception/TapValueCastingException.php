@@ -8,4 +8,15 @@
 
     class TapValueCastingException extends Exception {
         
+        private $mMissingKey;
+        
+        public function __construct($message, $code, $missingKey, Exception $previous=null) {
+            parent::__construct($message, $code, $previous);
+            $this->mMissingKey = $missingKey;
+        }
+        
+        public function getMissingKey() {
+            return $this->mMissingKey;
+        }
+
     }

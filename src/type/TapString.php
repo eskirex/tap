@@ -6,8 +6,12 @@
  * Time: 02:31
  */
 
+namespace tap\type;
 
-    class TapString extends TapVal {
+
+    use tap\type\group\TapValidKeyInterface;
+
+    class TapString extends AbstractTapVal implements TapValidKeyInterface {
 
 
         /**
@@ -20,6 +24,7 @@
 
         
         public function assertPregMatch($regex, Exception $failEx=null) {
+            
             return $this;
         }
         

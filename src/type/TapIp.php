@@ -6,6 +6,7 @@
  * Time: 02:46
  */
 
+namespace tap\type;
 
     class TapIp {
         

@@ -6,6 +6,7 @@
  * Time: 02:41
  */
 
+namespace tap\type;
 
     class TapFileName {
         

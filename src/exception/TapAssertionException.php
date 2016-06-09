@@ -11,7 +11,7 @@
 
         private $mActualValue;
 
-        public function __construct($message, $code, $failedValue, $previous) {
+        public function __construct($message, $code, $failedValue, $previous=null) {
             parent::__construct($message, $code, $previous);
             $this->mActualValue = $failedValue;
         }

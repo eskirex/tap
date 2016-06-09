@@ -6,6 +6,7 @@
  * Time: 03:52
  */
 
+namespace tap\type;
 
     class TapObject {
         

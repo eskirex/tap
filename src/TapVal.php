@@ -6,6 +6,7 @@
  * Time: 02:26
  */
 
+    namespace tap;
 
     /**
      * 
@@ -26,37 +27,37 @@
         }
 
         
-        public function assertIsStringArray (Exception $failEx=null) {
+        public function assertIsStringArray (\Exception $failEx=null) {
             return new TapStringArray();
         }
         
         
-        public function assertIsArray (Exception $failEx=null) {
+        public function assertIsArray (\Exception $failEx=null) {
             return $this;
         }
         
-        public function assertInstanceOf (Exception $failEx=null) {
+        public function assertInstanceOf (\Exception $failEx=null) {
             
         }
         
-        public function assertIsString(Exception $failEx=null) {
+        public function assertIsString(\Exception $failEx=null) {
             return new TapString();
         }
         
-        public function assertIsInt (Exception $failEx=null)  {
+        public function assertIsInt (\Exception $failEx=null)  {
             
         }
         
-        public function assertIsBool (Exception $failEx=null) {
+        public function assertIsBool (\Exception $failEx=null) {
             
         }
         
         
-        public function assertIsObject (Exception $failEx) {
+        public function assertIsObject (\Exception $failEx) {
             return new TapObject();
         }
         
-        public function assertIsCallable (Exception $failEx=null) {
+        public function assertIsCallable (\Exception $failEx=null) {
             return new TapCallable();
         }
         

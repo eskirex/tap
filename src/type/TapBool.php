@@ -5,6 +5,7 @@
  * Date: 09.06.16
  * Time: 03:20
  */
+namespace tap\type;
 
     class TapBool {
 

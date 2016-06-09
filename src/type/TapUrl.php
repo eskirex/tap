@@ -6,6 +6,7 @@
  * Time: 02:40
  */
 
+namespace tap\type;
 
     class TapUrl {
         
