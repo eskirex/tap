@@ -7,6 +7,8 @@
  */
 
     namespace tap;
+    use tap\type\AbstractTapVal;
+    use tap\type\TapString;
 
     /**
      * 
@@ -18,14 +20,8 @@
     }
 
 
-    class TapVal {
+    class TapVal extends AbstractTapVal{
         
-        protected $mVal;
-        
-        public function __construct($val) {
-            $this->mVal = $val;
-        }
-
         
         public function assertIsStringArray (\Exception $failEx=null) {
             return new TapStringArray();
@@ -39,9 +35,16 @@
         public function assertInstanceOf (\Exception $failEx=null) {
             
         }
-        
+
+        /**
+         * @param \Exception|null $failEx
+         * @return TapString
+         */
         public function assertIsString(\Exception $failEx=null) {
-            return new TapString();
+            if ( ! is_string($this->val)) {
+                
+            }
+            return new TapString($this->val);
         }
         
         public function assertIsInt (\Exception $failEx=null)  {

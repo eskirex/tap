@@ -7,7 +7,9 @@
  */
 
 
-    class TapAssertionException extends Exception {
+    namespace tap\exception;
+
+    class TapAssertionException extends TapException {
 
         private $mActualValue;
 
