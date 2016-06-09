@@ -8,7 +8,7 @@
 namespace tap\type;
 
 
-    class TapUri extends TapVal {
+    class TapUri extends AbstractTapVal {
 
         public function isUrl() {
 

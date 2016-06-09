@@ -6,17 +6,24 @@
  * Time: 02:55
  */
 
-    class TapValueCastingException extends Exception {
+    namespace tap\exception;
+    
+    
+    class TapValueCastingException extends TapException {
         
-        private $mMissingKey;
+        private $mFailedValue;
         
-        public function __construct($message, $code, $missingKey, Exception $previous=null) {
+        public function __construct($message, $code, $failedValue, \Exception $previous=null) {
+            $message = str_replace("?", "'$failedValue'", $message);
             parent::__construct($message, $code, $previous);
-            $this->mMissingKey = $missingKey;
+            $this->mFailedValue = $failedValue;
         }
         
-        public function getMissingKey() {
-            return $this->mMissingKey;
+        public function getFailedValue() {
+            return $this->mFailedValue;
         }
+
+
+
 
     }

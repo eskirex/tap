@@ -7,4 +7,10 @@
  */
 
 
-\tap\tapval("wurst")->assertIsString()->assertUri()->isFileName()
+    require __DIR__ . "/../src/autoload.php";
+    
+    
+    
+    
+    
+\tap\tapval("wurst")->assertIsString()->assertUri()->isFileName();

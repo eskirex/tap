@@ -135,24 +135,4 @@ namespace tap\type;
             
         }
         
-        
-        public function toDate() {
-            return new TapDate();
-        }
-        
-
-        /**
-         * @return TapInt
-         */
-        public function toInt() {
-            return new TapInt();
-        }
-
-        /**
-         * @return TapUri
-         */
-        public function toUri() {
-            return new TapUri();
-        }
-        
     }

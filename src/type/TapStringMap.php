@@ -9,15 +9,25 @@
     namespace tap\type;
 
 
-    class TapAssocStringContainer {
-        
+    class TapStringMap extends AbstractTapVal {
+
+
+        /**
+         * @return TapString
+         */
+        public function asQueryString () {
+            return new TapString(http_build_query($this->val));
+        }
+
         
         
         public function asArray($name) {
             return new TapStringArray();
         }
+
         
-        
+
+
         public function asString($name, $default=null) {
             
         }

@@ -6,10 +6,20 @@
  * Time: 04:28
  */
 
-    namespace tap\exception\TapValueMissingException;
+    namespace tap\exception;
     
-    use tap\exception\TapException;
+   
 
     class TapKeyMissingException extends TapException {
+        private $mMissingKey;
         
+        public function __construct($message, $code, $missingKey, \Exception $previous=null) {
+            parent::__construct($message, $code, $previous);
+            $this->mMissingKey = $missingKey;
+        }
+        
+        public function getMissingKey() {
+            return $this->mMissingKey;
+        }
+
     }

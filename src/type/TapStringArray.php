@@ -9,30 +9,38 @@
 namespace tap\type;
 
 
-    class TapStringArray {
-
+    class TapStringArray extends AbstractTapVal {
 
 
         public function push($value) {
-
+            if ($value instanceof TapStringArray) {
+                $value->each(function (TapString $val) {
+                    $this->val[] = $val->val();
+                });
+                return $this;
+            }
+            
+            $this->val[] = \tap\tapString($value)->val();
+            return $this;
         }
         
         
         public function getLength() {
-            
+            return count ($this->val);
         }
         
         
         public function translate (array $translations, Exception $failEx=null) {
             
         }
-        
-        
-        
-        
-        
+
+
+        /**
+         * @param $delimiter
+         * @return TapString
+         */
         public function implode ($delimiter) {
-            return new TapString();
+            return new TapString(implode($delimiter, $this->val));
         }
 
 

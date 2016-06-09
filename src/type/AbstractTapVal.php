@@ -12,8 +12,35 @@
 
         protected $val;
 
+        /**
+         * AbstractTapVal constructor.
+         *
+         * Inside Tap the types are considered "save".
+         *
+         * So nobody from outside may call constructors
+         *
+         * @param $val
+         */
+        protected function __construct ($val) {
+            $this->__filterIn($val);
+        }
 
+
+        protected function __filterIn ($val) {
+            $this->val = $val;
+        }
+
+        protected function __filterOut () {
+            return $this->val;
+        }
+
+
+        /**
+         * Return the original PHP Type
+         *
+         * @return mixed
+         */
         public function val() {
-            return $this->val();
+            return $this->__filterOut();
         }
     }

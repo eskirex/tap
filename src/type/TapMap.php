@@ -10,7 +10,7 @@
     
     
     use tap\exception\TapInvalidKeyException;
-    use tap\exception\TapValueMissingException\TapKeyMissingException;
+    use tap\exception\TapKeyMissingException;
     use tap\TapVal;
     use tap\type\AbstractTapVal;
     use tap\type\group\TapValidKeyInterface;
@@ -47,7 +47,7 @@
                 if ($default !== null)
                     return new TapVal($default);
                 if ($failEx === null)
-                    $failEx = new TapKeyMissingException("Missing key '$key'", 1, $key);
+                    $failEx = new TapKeyMissingException("Missing key ?", 1, $key);
                 throw $failEx;
             }
             return new TapVal($this->val[$key]);
@@ -64,7 +64,13 @@
             return $this;
         }
 
-
+        /**
+         * @return bool
+         */
+        public function isEmpty () {
+            return empty($this->val);
+        }
+        
         /**
          * @param $key
          * @param $value

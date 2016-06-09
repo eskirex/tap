@@ -10,17 +10,14 @@
     use tap\type\AbstractTapVal;
     use tap\type\TapString;
 
-    /**
-     * 
-     * @param $val
-     * @return TapVal
-     */
-    function tapval ($val) {
-        
-    }
+   
 
 
     class TapVal extends AbstractTapVal{
+
+
+       
+        
         
         
         public function assertIsStringArray (\Exception $failEx=null) {
@@ -44,6 +41,7 @@
             if ( ! is_string($this->val)) {
                 
             }
+            
             return new TapString($this->val);
         }
         
