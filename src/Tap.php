@@ -117,8 +117,8 @@
             if ( ! is_string($url)) {
                 throw new TapValueCastingException("Cannot cast type ? as TapString", 1, $url);
             }
-            if ( ! filter_var($url, FILTER_VALIDATE_URL))
-                throw new TapValueCastingException("String ? is not in url format", 2, $url);
+           // if ( ! filter_var($url, FILTER_VALIDATE_URL))
+           //     throw new TapValueCastingException("String ? is not in url format", 2, $url);
             return new TapUrl($url);
         }
 
